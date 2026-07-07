@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tejasvini Gudade | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1d4ed8);
+    color:#fff;
+}
+
+/* Navigation */
+
+nav{
+    position:sticky;
+    top:0;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:18px;
+    background:#111827;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+/* Header */
+
+header{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.name{
+    font-size:55px;
+    font-weight:bold;
+    background:linear-gradient(90deg,#38bdf8,#00ffcc,#38bdf8);
+    background-size:300%;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:gradientMove 5s linear infinite,float 3s ease-in-out infinite;
+}
+
+@keyframes gradientMove{
+    from{background-position:0%;}
+    to{background-position:300%;}
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+}
+
+#role{
+    color:#38bdf8;
+    font-size:28px;
+    margin-top:15px;
+    min-height:40px;
+}
+
+.cursor{
+    animation:blink .8s infinite;
+}
+
+@keyframes blink{
+    50%{
+        opacity:0;
+    }
+}
+
+.subtitle{
+    margin-top:10px;
+    font-size:20px;
+}
+
+/* Buttons */
+
+.buttons{
+    margin-top:30px;
+}
+
+.btn{
+    display:inline-block;
+    margin:8px;
+    padding:12px 22px;
+    border-radius:30px;
+    background:#38bdf8;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.4s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    background:#00d4ff;
+}
+
+/* Sections */
+
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+h2{
+    text-align:center;
+    color:#38bdf8;
+    margin-bottom:25px;
+    font-size:35px;
+}
+
+.card{
+    background:rgba(255,255,255,.08);
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:20px;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+/* Skills */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.skills span{
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+    padding:12px 20px;
+    border-radius:30px;
+    font-weight:600;
+    color:white;
+    cursor:pointer;
+    transition:.4s;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    opacity:0;
+    transform:translateY(40px);
+}
+
+.skills span.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.skills span:hover{
+    transform:translateY(-8px) scale(1.08);
+    background:linear-gradient(135deg,#ff6b6b,#ff9800);
+}
+
+/* Lists */
+
+ul{
+    margin-top:10px;
+    margin-left:20px;
+}
+
+li{
+    margin:8px 0;
+}
+
+/* Contact */
+
+#contact a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+#contact a:hover{
+    color:white;
+}
+
+/* Footer */
+
+footer{
+    background:#111827;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.name{
+    font-size:38px;
+}
+
+#role{
+    font-size:22px;
+}
+
+nav{
+    gap:10px;
+}
+
+.btn{
+    display:block;
+    width:220px;
+    margin:10px auto;
+}
+
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+
+<nav>
+
+    <a href="#about">About</a>
+
+    <a href="#education">Education</a>
+
+    <a href="#skills">Skills</a>
+
+    <a href="#experience">Experience</a>
+
+    <a href="#projects">Projects</a>
+
+    <a href="#certifications">Certificates</a>
+
+    <a href="#contact">Contact</a>
+
+</nav>
+
+<!-- Hero Section -->
+
+<header>
+
+    <h1 class="name">Tejasvini Gudade</h1>
+
+    <h2 id="role"></h2>
+
+    <p class="subtitle">
+        Software Engineer | Java Developer
+    </p>
+
+    <div class="buttons">
+
+        <a class="btn" href="resume.pdf" target="_blank">
+            📄 View Resume
+        </a>
+
+        <a class="btn" href="resume.pdf" download>
+            ⬇ Download Resume
+        </a>
+
+        <a class="btn" href="tel:+918421960472">
+            📞 Call Me
+        </a>
+
+        <a class="btn" href="mailto:tejswinigudade2021@gmail.com">
+            ✉ Email
+        </a>
+
+    </div>
+
+</header>
+
+<!-- About -->
+
+<section id="about">
+
+<h2>Professional Summary</h2>
+
+<div class="card">
+
+<p>
+
+Recent B.E. Computer Science graduate with strong knowledge of Java,
+Spring Framework, JDBC, Servlets, SQL and MySQL.
+Passionate about building web applications,
+REST APIs and solving programming problems using Object-Oriented Programming.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- Education -->
+
+<section id="education">
+
+<h2>Education</h2>
+
+<div class="card">
+
+<h3>🎓 Bachelor of Engineering (Computer Science)</h3>
+
+<p>Savitribai Phule Pune University</p>
+
+<p>2021 - 2025</p>
+
+<p><b>CGPA :</b> 7.91 / 10</p>
+
+</div>
+
+<div class="card">
+
+<h3>📚 Higher Secondary Certificate (HSC)</h3>
+
+<p>Maharashtra State Board</p>
+
+<p>2020 - 2021</p>
+
+<p><b>Percentage :</b> 77%</p>
+
+</div>
+
+<div class="card">
+
+<h3>🏫 Secondary School Certificate (SSC)</h3>
+
+<p>Maharashtra State Board</p>
+
+<p>2018 - 2019</p>
+
+<p><b>Percentage :</b> 78%</p>
+
+</div>
+
+</section>
+
+<!-- Skills -->
+
+<section id="skills">
+
+<h2>Technical Skills</h2>
+
+<div class="card">
+
+<div class="skills">
+
+<span>☕ Java</span>
+<span>💻 C</span>
+<span>🚀 C++</span>
+<span>🌐 HTML5</span>
+<span>🎨 CSS3</span>
+<span>⚡ JavaScript</span>
+<span>📘 Core Java</span>
+<span>🔗 JDBC</span>
+<span>🌱 Spring Framework</span>
+<span>⚙ Spring JDBC</span>
+<span>🗄 SQL</span>
+<span>🐬 MySQL</span>
+<span>🐘 PostgreSQL</span>
+<span>🔄 REST API</span>
+<span>📦 JSON</span>
+<span>🐙 Git</span>
+<span>💼 GitHub</span>
+<span>📁 Maven</span>
+<span>🖥 Eclipse</span>
+<span>🌱 STS</span>
+<span>📝 VS Code</span>
+<span>🧠 OOP</span>
+<span>📊 SDLC</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Experience -->
+
+<section id="experience">
+
+<h2>Experience</h2>
+
+<div class="card">
+
+<h3>Web Developer Intern</h3>
+
+<p>A2Z IT Hub Pvt. Ltd.</p>
+
+<p>Duration : 6 Months</p>
+
+<ul>
+
+<li>Developed responsive web applications.</li>
+
+<li>Worked on backend and database integration.</li>
+
+<li>Collaborated with developers.</li>
+
+<li>Improved debugging and problem-solving skills.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- Projects -->
+
+
+
+<section id="projects">
+
+    <h2>Projects</h2>
+
+    <div class="card">
+
+        <h3>🍳 CookSmart – Centric Recipe Recommendation System</h3>
+
+        <p>
+            Developed an ingredient-based recipe recommendation system that suggests recipes
+            based on user-selected ingredients. Integrated MySQL database using JDBC and
+            designed a responsive interface using HTML, CSS and JavaScript.
+        </p>
+
+        <p><b>Tech Stack:</b> Java, JDBC, MySQL, HTML, CSS, JavaScript</p>
+
+        <hr>
+
+        <h3>🎓 Placement Management System</h3>
+
+        <p>
+            Developed a placement management system for student registration, company
+            management and recruitment tracking. Implemented CRUD operations using
+            Java, Servlets, JDBC and MySQL.
+        </p>
+
+        <p><b>Tech Stack:</b> Java, Servlets, JDBC, MySQL, HTML, CSS, JavaScript</p>
+
+        <hr>
+
+        <h3>💼 Internship Recommendation System</h3>
+
+        <p>
+            Developed an Internship Recommendation System that recommends suitable
+            internships based on students' skills, qualifications and interests.
+            Built a responsive web application with secure database integration.
+        </p>
+
+        <p><b>Tech Stack:</b> Java, Spring Boot, MySQL, HTML, CSS, JavaScript, Bootstrap</p>
+
+    </div>
+
+</section>
+
+
+
+<!-- Certificates -->
+
+<section id="certifications">
+
+<h2>Certifications</h2>
+
+<div class="card">
+
+<ul>
+
+<li>Java Development Certification</li>
+
+<li>Internship Programming Certification</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<div class="card">
+
+<p>📞
+<a href="tel:+918421960472">
++91 8421960472
+</a>
+</p>
+
+<p>📧
+<a href="mailto:tejswinigudade2021@gmail.com">
+tejswinigudade2021@gmail.com
+</a>
+</p>
+
+<p>💼
+<a href="https://www.linkedin.com/in/tejaswini-gudade/" target="_blank">
+LinkedIn Profile
+</a>
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Tejasvini Gudade
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+<script>
+
+    // =========================
+// Typing Animation
+// =========================
+
+const roles = [
+    "💻 Software Engineer",
+    "☕ Java Developer",
+    "🚀 Full Stack Developer",
+    "🌐 Web Developer"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+let deleting = false; 
+
+const role = document.getElementById("role");
+
+function typingEffect() {
+
+    let current = roles[roleIndex];
+
+    if (!deleting) {
+
+        role.innerHTML =
+            current.substring(0, charIndex) +
+            "<span class='cursor'>|</span>";
+
+        charIndex++;
+
+        if (charIndex > current.length) {
+            deleting = true;
+            setTimeout(typingEffect, 1500);
+            return;
+        }
+
+    } else {
+
+        role.innerHTML =
+            current.substring(0, charIndex) +
+            "<span class='cursor'>|</span>";
+
+        charIndex--;
+
+        if (charIndex < 0) {
+            deleting = false;
+            roleIndex++;
+
+            if (roleIndex >= roles.length) {
+                roleIndex = 0;
+            }
+        }
+    }
+
+    setTimeout(typingEffect, deleting ? 50 : 100);
+}
+
+typingEffect();
+
+
+// =========================
+// Skills Animation
+// =========================
+
+const skills = document.querySelectorAll(".skills span");
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry) => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+}, {
+    threshold: 0.2
+});
+
+skills.forEach((skill, index) => {
+
+    skill.style.transitionDelay = `${index * 0.08}s`;
+
+    observer.observe(skill);
+
+});
+
+
+// =========================
+// Card Animation
+// =========================
+
+const cards = document.querySelectorAll(".card");
+
+const cardObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry) => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.animate(
+                [
+                    {
+                        opacity: 0,
+                        transform: "translateY(40px)"
+                    },
+                    {
+                        opacity: 1,
+                        transform: "translateY(0)"
+                    }
+                ],
+                {
+                    duration: 700,
+                    fill: "forwards"
+                }
+            );
+
+            cardObserver.unobserve(entry.target);
+
+        }
+
+    });
+
+}, {
+    threshold: 0.15
+});
+
+cards.forEach(card => {
+
+    card.style.opacity = "0";
+
+    cardObserver.observe(card);
+
+});
+
+
+// =========================
+// Active Navbar Link
+// =========================
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 120;
+
+        if (window.scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.style.color = "white";
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.style.color = "#38bdf8";
+        }
+
+    });
+
+});
+</script>
+
+</html>
+
+
+</body>
+
+
+</html>
