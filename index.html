@@ -1,241 +1,355 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tejasvini Gudade | Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Tejasvini Gudade | Java Full Stack Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
 <style>
 
-
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-    scroll-behavior:smooth;
-}
-
-body{
-    background:linear-gradient(135deg,#0f172a,#1d4ed8);
-    color:#fff;
-}
-
-/* Navigation */
-
-nav{
-    position:sticky;
-    top:0;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:20px;
-    padding:18px;
-    background:#111827;
-    z-index:1000;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#38bdf8;
-}
-
-/* Header */
-
-header{
-    text-align:center;
-    padding:80px 20px;
-}
-
-.name{
-    font-size:55px;
-    font-weight:bold;
-    background:linear-gradient(90deg,#38bdf8,#00ffcc,#38bdf8);
-    background-size:300%;
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    animation:gradientMove 5s linear infinite,float 3s ease-in-out infinite;
-}
-
-@keyframes gradientMove{
-    from{background-position:0%;}
-    to{background-position:300%;}
-}
-
-@keyframes float{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-10px);}
-}
-
-#role{
-    color:#38bdf8;
-    font-size:28px;
-    margin-top:15px;
-    min-height:40px;
-}
-
-.cursor{
-    animation:blink .8s infinite;
-}
-
-@keyframes blink{
-    50%{
-        opacity:0;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        scroll-behavior: smooth;
     }
-}
 
-.subtitle{
-    margin-top:10px;
-    font-size:20px;
-}
+    body {
+        background: linear-gradient(135deg, #0f172a, #1d4ed8);
+        color: #fff;
+        line-height: 1.6;
+    }
 
-/* Buttons */
+    /* =========================
+       NAVIGATION
+    ========================= */
 
-.buttons{
-    margin-top:30px;
-}
+    nav {
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 18px;
+        background: #111827;
+        z-index: 1000;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
 
-.btn{
-    display:inline-block;
-    margin:8px;
-    padding:12px 22px;
-    border-radius:30px;
-    background:#38bdf8;
-    color:#000;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.4s;
-}
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.3s;
+    }
 
-.btn:hover{
-    transform:translateY(-5px);
-    background:#00d4ff;
-}
+    nav a:hover {
+        color: #38bdf8;
+    }
 
-/* Sections */
+    /* =========================
+       HERO SECTION
+    ========================= */
 
-section{
-    max-width:1100px;
-    margin:auto;
-    padding:60px 20px;
-}
+    header {
+        text-align: center;
+        padding: 90px 20px;
+    }
 
-h2{
-    text-align:center;
-    color:#38bdf8;
-    margin-bottom:25px;
-    font-size:35px;
-}
+    .name {
+        font-size: 55px;
+        font-weight: 700;
+        background: linear-gradient(
+            90deg,
+            #38bdf8,
+            #00ffcc,
+            #38bdf8
+        );
 
-.card{
-    background:rgba(255,255,255,.08);
-    padding:25px;
-    border-radius:15px;
-    margin-bottom:20px;
-    transition:.4s;
-}
+        background-size: 300%;
 
-.card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 10px 30px rgba(0,0,0,.4);
-}
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 
-/* Skills */
+        animation:
+            gradientMove 5s linear infinite,
+            float 3s ease-in-out infinite;
+    }
 
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
-}
+    @keyframes gradientMove {
 
+        from {
+            background-position: 0%;
+        }
 
-.skills span{
-    background:linear-gradient(135deg,#00c6ff,#0072ff);
-    padding:12px 20px;
-    border-radius:30px;
-    font-weight:600;
-    color:white;
-    cursor:pointer;
-    transition:.4s;
-    box-shadow:0 5px 15px rgba(0,0,0,.3);
-    opacity:0;
-    transform:translateY(40px);
-}
+        to {
+            background-position: 300%;
+        }
+    }
 
-.skills span.show{
-    opacity:1;
-    transform:translateY(0);
-}
+    @keyframes float {
 
-.skills span:hover{
-    transform:translateY(-8px) scale(1.08);
-    background:linear-gradient(135deg,#ff6b6b,#ff9800);
-}
+        0%, 100% {
+            transform: translateY(0);
+        }
 
-/* Lists */
+        50% {
+            transform: translateY(-10px);
+        }
+    }
 
-ul{
-    margin-top:10px;
-    margin-left:20px;
-}
+    #role {
+        color: #38bdf8;
+        font-size: 28px;
+        margin-top: 15px;
+        min-height: 45px;
+    }
 
-li{
-    margin:8px 0;
-}
+    .cursor {
+        animation: blink 0.8s infinite;
+    }
 
-/* Contact */
+    @keyframes blink {
 
-#contact a{
-    color:#38bdf8;
-    text-decoration:none;
-}
+        50% {
+            opacity: 0;
+        }
+    }
 
-#contact a:hover{
-    color:white;
-}
+    .subtitle {
+        margin-top: 10px;
+        font-size: 20px;
+        color: #e2e8f0;
+    }
 
-/* Footer */
+    /* =========================
+       BUTTONS
+    ========================= */
 
-footer{
-    background:#111827;
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
-}
+    .buttons {
+        margin-top: 30px;
+    }
 
-/* Responsive */
+    .btn {
+        display: inline-block;
+        margin: 8px;
+        padding: 12px 22px;
+        border-radius: 30px;
+        background: #38bdf8;
+        color: #000;
+        text-decoration: none;
+        font-weight: 700;
+        transition: 0.4s;
+    }
 
-@media(max-width:768px){
+    .btn:hover {
+        transform: translateY(-5px);
+        background: #00d4ff;
+        box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
+    }
 
-.name{
-    font-size:38px;
-}
+    /* =========================
+       SECTIONS
+    ========================= */
 
-#role{
-    font-size:22px;
-}
+    section {
+        max-width: 1100px;
+        margin: auto;
+        padding: 60px 20px;
+    }
 
-nav{
-    gap:10px;
-}
+    h2 {
+        text-align: center;
+        color: #38bdf8;
+        margin-bottom: 30px;
+        font-size: 35px;
+    }
 
-.btn{
-    display:block;
-    width:220px;
-    margin:10px auto;
-}
+    .card {
+        background: rgba(255, 255, 255, 0.08);
+        padding: 25px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        transition: 0.4s;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
 
-}
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .card h3 {
+        color: #00ffcc;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        margin: 7px 0;
+        color: #e2e8f0;
+    }
+
+    .card hr {
+        margin: 25px 0;
+        border: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* =========================
+       SKILLS
+    ========================= */
+
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .skills span {
+        background: linear-gradient(135deg, #00c6ff, #0072ff);
+        padding: 12px 20px;
+        border-radius: 30px;
+        font-weight: 600;
+        color: white;
+        cursor: pointer;
+        transition: 0.4s;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    .skills span.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .skills span:hover {
+        transform: translateY(-8px) scale(1.08);
+        background: linear-gradient(135deg, #ff6b6b, #ff9800);
+    }
+
+    /* =========================
+       LISTS
+    ========================= */
+
+    ul {
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+
+    li {
+        margin: 8px 0;
+        color: #e2e8f0;
+    }
+
+    /* =========================
+       PROJECT BUTTON
+    ========================= */
+
+    .project-btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 18px;
+        background: #38bdf8;
+        color: #000;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    .project-btn:hover {
+        background: #00ffcc;
+        transform: translateY(-3px);
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    #contact a {
+        color: #38bdf8;
+        text-decoration: none;
+    }
+
+    #contact a:hover {
+        color: white;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+        background: #111827;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+        color: #cbd5e1;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 768px) {
+
+        .name {
+            font-size: 38px;
+        }
+
+        #role {
+            font-size: 22px;
+        }
+
+        nav {
+            gap: 10px;
+            padding: 15px 10px;
+        }
+
+        nav a {
+            font-size: 14px;
+        }
+
+        .btn {
+            display: block;
+            width: 220px;
+            margin: 10px auto;
+        }
+
+        section {
+            padding: 45px 15px;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+    }
+
 </style>
+```
+
 </head>
+
 <body>
 
-<!-- Navigation -->
+```
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
 
@@ -255,475 +369,831 @@ nav{
 
 </nav>
 
-<!-- Hero Section -->
+
+<!-- =========================
+     HERO SECTION
+========================= -->
 
 <header>
 
-    <h1 class="name">Tejasvini Gudade</h1>
+    <h1 class="name">
+        Tejasvini Gudade
+    </h1>
 
     <h2 id="role"></h2>
 
     <p class="subtitle">
-        Software Engineer | Java Developer
+        Software Engineer | Java Full Stack Developer
     </p>
 
     <div class="buttons">
 
-        <a class="btn" href="resume.pdf" target="_blank">
+        <a class="btn"
+           href="resume.pdf"
+           target="_blank">
+
             📄 View Resume
+
         </a>
 
-        <a class="btn" href="resume.pdf" download>
+        <a class="btn"
+           href="resume.pdf"
+           download>
+
             ⬇ Download Resume
+
         </a>
 
-        <a class="btn" href="tel:+918421960472">
+        <a class="btn"
+           href="tel:+918421960472">
+
             📞 Call Me
+
         </a>
 
-        <a class="btn" href="mailto:tejswinigudade2021@gmail.com">
+        <a class="btn"
+           href="mailto:tejswinigudade2021@gmail.com">
+
             ✉ Email
+
         </a>
 
-        <a class="btn" href="https://github.com/tejasvini987" target="_blank">
-    <i class="fab fa-github"></i> GitHub
-</a>
+        <a class="btn"
+           href="https://github.com/tejasvini987"
+           target="_blank">
+
+            💻 GitHub
+
+        </a>
 
     </div>
 
 </header>
 
-<!-- About -->
+
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section id="about">
 
-<h2>Professional Summary</h2>
-
-<div class="card">
-
-<p>
-
-Recent B.E. Computer Science graduate with strong knowledge of Java,
-Spring Framework, JDBC, Servlets, SQL and MySQL.
-Passionate about building web applications,
-REST APIs and solving programming problems using Object-Oriented Programming.
-
-</p>
-
-</div>
-
-</section>
-
-<!-- Education -->
-
-<section id="education">
-
-<h2>Education</h2>
-
-<div class="card">
-
-<h3>🎓 Bachelor of Engineering (Computer Science)</h3>
-
-<p>Savitribai Phule Pune University</p>
-
-<p>2021 - 2025</p>
-
-<p><b>CGPA :</b> 7.91 / 10</p>
-
-</div>
-
-<div class="card">
-
-<h3>📚 Higher Secondary Certificate (HSC)</h3>
-
-<p>Maharashtra State Board</p>
-
-<p>2020 - 2021</p>
-
-<p><b>Percentage :</b> 77%</p>
-
-</div>
-
-<div class="card">
-
-<h3>🏫 Secondary School Certificate (SSC)</h3>
-
-<p>Maharashtra State Board</p>
-
-<p>2018 - 2019</p>
-
-<p><b>Percentage :</b> 78%</p>
-
-</div>
-
-</section>
-
-<!-- Skills -->
-
-<section id="skills">
-
-<h2>Technical Skills</h2>
-
-<div class="card">
-
-<div class="skills">
-
-<span>☕ Java</span>
-<span>💻 C</span>
-<span>🚀 C++</span>
-<span>🌐 HTML5</span>
-<span>🎨 CSS3</span>
-<span>⚡ JavaScript</span>
-<span>📘 Core Java</span>
-<span>🔗 JDBC</span>
-<span>🌱 Spring Framework</span>
-<span>⚙ Spring JDBC</span>
-<span>🗄 SQL</span>
-<span>🐬 MySQL</span>
-<span>🐘 PostgreSQL</span>
-<span>🔄 REST API</span>
-<span>📦 JSON</span>
-<span>🐙 Git</span>
-<span>💼 GitHub</span>
-<span>📁 Maven</span>
-<span>🖥 Eclipse</span>
-<span>🌱 STS</span>
-<span>📝 VS Code</span>
-<span>🧠 OOP</span>
-<span>📊 SDLC</span>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Experience -->
-
-<section id="experience">
-
-<h2>Experience</h2>
-
-<div class="card">
-
-<h3>Web Developer Intern</h3>
-
-<p>A2Z IT Hub Pvt. Ltd.</p>
-
-<p>Duration : 6 Months</p>
-
-<ul>
-
-<li>Developed responsive web applications.</li>
-
-<li>Worked on backend and database integration.</li>
-
-<li>Collaborated with developers.</li>
-
-<li>Improved debugging and problem-solving skills.</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<!-- Projects -->
-
-
-
-<section id="projects">
-
-    <h2>Projects</h2>
+    <h2>
+        Professional Summary
+    </h2>
 
     <div class="card">
 
-        <h3>🍳 CookSmart – Centric Recipe Recommendation System</h3>
-
         <p>
-            Developed an ingredient-based recipe recommendation system that suggests recipes
-            based on user-selected ingredients. Integrated MySQL database using JDBC and
-            designed a responsive interface using HTML, CSS and JavaScript.
+
+            Recent B.E. Computer Science graduate with strong knowledge
+            of Java, Spring Framework, Spring Boot, JDBC, Servlets,
+            SQL and MySQL.
+
+            Passionate about developing responsive web applications,
+            REST APIs and database-driven applications using
+            Object-Oriented Programming and MVC architecture.
+
         </p>
-
-        <p><b>Tech Stack:</b> Java, JDBC, MySQL, HTML, CSS, JavaScript</p>
-
-        <hr>
-
-        <h3>🎓 Placement Management System</h3>
-
-        <p>
-            Developed a placement management system for student registration, company
-            management and recruitment tracking. Implemented CRUD operations using
-            Java, Servlets, JDBC and MySQL.
-        </p>
-
-        <p><b>Tech Stack:</b> Java, Servlets, JDBC, MySQL, HTML, CSS, JavaScript</p>
-
-        <hr>
-
-        <h3>💼 Smart Career Recommendation & Online Assessment System</h3>
-
-<p>
-    Developed a Smart Career Recommendation & Online Assessment System 
-    using Spring Boot, Spring MVC, and Spring JDBC. 
-    The system enables students to explore internships and career 
-    opportunities based on their skills and qualifications, 
-    complete online assessments, and securely manage profiles with MySQL database integration.
-</p>
-
-        <p><b>Tech Stack:</b> Java, Spring Boot, MySQL, HTML, CSS, JavaScript, Bootstrap</p>
 
     </div>
 
 </section>
 
 
+<!-- =========================
+     EDUCATION
+========================= -->
 
-<!-- Certificates -->
+<section id="education">
+
+    <h2>
+        Education
+    </h2>
+
+    <div class="card">
+
+        <h3>
+            🎓 Bachelor of Engineering (Computer Science)
+        </h3>
+
+        <p>
+            Savitribai Phule Pune University
+        </p>
+
+        <p>
+            2021 - 2025
+        </p>
+
+        <p>
+            <b>CGPA:</b> 7.91 / 10
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>
+            📚 Higher Secondary Certificate (HSC)
+        </h3>
+
+        <p>
+            Maharashtra State Board
+        </p>
+
+        <p>
+            2020 - 2021
+        </p>
+
+        <p>
+            <b>Percentage:</b> 77%
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>
+            🏫 Secondary School Certificate (SSC)
+        </h3>
+
+        <p>
+            Maharashtra State Board
+        </p>
+
+        <p>
+            2018 - 2019
+        </p>
+
+        <p>
+            <b>Percentage:</b> 78%
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills">
+
+    <h2>
+        Technical Skills
+    </h2>
+
+    <div class="card">
+
+        <div class="skills">
+
+            <span>☕ Java</span>
+
+            <span>📘 Core Java</span>
+
+            <span>🧠 OOP</span>
+
+            <span>🔗 JDBC</span>
+
+            <span>🌱 Spring Framework</span>
+
+            <span>🚀 Spring Boot</span>
+
+            <span>⚙ Spring JDBC</span>
+
+            <span>🔄 Spring Data JPA</span>
+
+            <span>🌐 Servlets</span>
+
+            <span>📄 JSP</span>
+
+            <span>🔗 REST API</span>
+
+            <span>🌐 HTML5</span>
+
+            <span>🎨 CSS3</span>
+
+            <span>⚡ JavaScript</span>
+
+            <span>🗄 SQL</span>
+
+            <span>🐬 MySQL</span>
+
+            <span>🐘 PostgreSQL</span>
+
+            <span>📦 JSON</span>
+
+            <span>🐙 Git</span>
+
+            <span>💼 GitHub</span>
+
+            <span>📁 Maven</span>
+
+            <span>🖥 Eclipse</span>
+
+            <span>🌱 STS</span>
+
+            <span>📝 VS Code</span>
+
+            <span>📊 SDLC</span>
+
+            <span>🏗 MVC</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section id="experience">
+
+    <h2>
+        Experience
+    </h2>
+
+    <div class="card">
+
+        <h3>
+            Web Developer Intern
+        </h3>
+
+        <p>
+            <b>A2Z IT Hub Pvt. Ltd.</b>
+        </p>
+
+        <p>
+            Duration: 6 Months
+        </p>
+
+        <ul>
+
+            <li>
+                Developed responsive web application modules
+                using HTML, CSS, JavaScript and Bootstrap.
+            </li>
+
+            <li>
+                Worked on frontend development and
+                backend/database integration.
+            </li>
+
+            <li>
+                Implemented SLD and schedule configuration
+                modules.
+            </li>
+
+            <li>
+                Worked with developers to debug issues and
+                improve application functionality.
+            </li>
+
+            <li>
+                Improved problem-solving and web development
+                skills through real-world project work.
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects">
+
+    <h2>
+        Projects
+    </h2>
+
+
+    <!-- CURRENT PROJECT -->
+
+    <div class="card">
+
+        <h3>
+            🎓 Internship Recommendation System
+        </h3>
+
+        <p>
+
+            Developed a Java-based internship recommendation
+            web application designed to help students find
+            and manage suitable internship opportunities.
+
+            The system provides separate Admin and Student
+            modules with role-based login functionality.
+
+        </p>
+
+        <ul>
+
+            <li>
+                Implemented Admin and Student login functionality.
+            </li>
+
+            <li>
+                Developed an Admin Dashboard for managing
+                internship/company-related information.
+            </li>
+
+            <li>
+                Developed Student Dashboard functionality
+                for student-specific operations.
+            </li>
+
+            <li>
+                Implemented database integration using
+                Spring Data JPA and MySQL.
+            </li>
+
+            <li>
+                Created repository and model layers following
+                Spring Boot architecture.
+            </li>
+
+            <li>
+                Implemented backend APIs for communication
+                between frontend and backend.
+            </li>
+
+            <li>
+                Used MVC-based application structure for
+                maintainable development.
+            </li>
+
+        </ul>
+
+        <p>
+            <b>Tech Stack:</b>
+            Java, Spring Boot, Spring Data JPA, MySQL,
+            HTML, CSS, JavaScript, REST API, Maven
+        </p>
+
+    </div>
+
+
+    <!-- PLACEMENT PROJECT -->
+
+    <div class="card">
+
+        <h3>
+            🏢 Placement Management System
+        </h3>
+
+        <p>
+
+            Developed a placement management system for
+            student registration, company management and
+            recruitment tracking.
+
+        </p>
+
+        <ul>
+
+            <li>
+                Implemented student registration and login.
+            </li>
+
+            <li>
+                Developed Admin Dashboard functionality.
+            </li>
+
+            <li>
+                Implemented company management operations.
+            </li>
+
+            <li>
+                Implemented CRUD operations using Java,
+                Servlets and JDBC.
+            </li>
+
+            <li>
+                Integrated MySQL database with the application.
+            </li>
+
+        </ul>
+
+        <p>
+            <b>Tech Stack:</b>
+            Java, Servlets, JDBC, MySQL,
+            HTML, CSS, JavaScript
+        </p>
+
+    </div>
+
+
+    <!-- COOKSMART PROJECT -->
+
+    <div class="card">
+
+        <h3>
+            🍳 CookSmart – Ingredient-Based Recipe System
+        </h3>
+
+        <p>
+
+            Developed an ingredient-based recipe recommendation
+            system that suggests recipes according to
+            user-selected ingredients.
+
+        </p>
+
+        <ul>
+
+            <li>
+                Implemented ingredient-based recipe searching.
+            </li>
+
+            <li>
+                Integrated MySQL database using JDBC.
+            </li>
+
+            <li>
+                Designed responsive frontend using
+                HTML, CSS and JavaScript.
+            </li>
+
+        </ul>
+
+        <p>
+            <b>Tech Stack:</b>
+            Java, JDBC, MySQL, HTML, CSS, JavaScript
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CERTIFICATIONS
+========================= -->
 
 <section id="certifications">
 
-<h2>Certifications</h2>
+    <h2>
+        Certifications
+    </h2>
 
-<div class="card">
+    <div class="card">
 
-<ul>
+        <ul>
 
-<li>Java Development Certification</li>
+            <li>
+                Java Development Certification
+            </li>
 
-<li>Internship Programming Certification</li>
+            <li>
+                Internship Programming Certification
+            </li>
 
-</ul>
+            <li>
+                CSS Certification
+            </li>
 
-</div>
+            <li>
+                JavaScript Certification
+            </li>
+
+            <li>
+                jQuery Certification
+            </li>
+
+        </ul>
+
+    </div>
 
 </section>
 
-<!-- Contact -->
+
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section id="contact">
 
-<h2>Contact</h2>
+    <h2>
+        Contact
+    </h2>
 
-<div class="card">
+    <div class="card">
 
-<p>📞
-<a href="tel:+918421960472">
-+91 8421960472
-</a>
-</p>
+        <p>
+            📞
+            <a href="tel:+918421960472">
+                +91 8421960472
+            </a>
+        </p>
 
-<p>📧
-<a href="mailto:tejswinigudade2021@gmail.com">
-tejswinigudade2021@gmail.com
-</a>
-</p>
+        <p>
+            📧
+            <a href="mailto:tejswinigudade2021@gmail.com">
+                tejswinigudade2021@gmail.com
+            </a>
+        </p>
 
-<p>💼
-<a href="https://www.linkedin.com/in/tejaswini-gudade/" target="_blank">
-LinkedIn Profile
-</a>
-</p>
-<p>💻
-    <a href="https://github.com/tejasvini987" target="_blank">
-        GitHub Profile
-    </a>
-    
-</p>
+        <p>
+            💼
+            <a href="https://www.linkedin.com/in/tejaswini-gudade/"
+               target="_blank">
 
-</div>
+                LinkedIn Profile
+
+            </a>
+        </p>
+
+        <p>
+            💻
+            <a href="https://github.com/tejasvini987"
+               target="_blank">
+
+                GitHub Profile
+
+            </a>
+        </p>
+
+    </div>
 
 </section>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
-© 2026 Tejasvini Gudade
+    © 2026 Tejasvini Gudade | Java Full Stack Developer
 
 </footer>
 
-<script src="script.js"></script>
 
-</body>
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
 <script>
 
-    // =========================
-// Typing Animation
-// =========================
+    /* =========================
+       TYPING ANIMATION
+    ========================= */
 
-const roles = [
-    "💻 Software Engineer",
-    "☕ Java Developer",
-    "🚀 Full Stack Developer",
-    "🌐 Web Developer"
-];
+    const roles = [
 
-let roleIndex = 0;
-let charIndex = 0;
-let deleting = false; 
+        "💻 Software Engineer",
 
-const role = document.getElementById("role");
+        "☕ Java Developer",
 
-function typingEffect() {
+        "🚀 Java Full Stack Developer",
 
-    let current = roles[roleIndex];
+        "🌐 Web Developer"
 
-    if (!deleting) {
+    ];
 
-        role.innerHTML =
-            current.substring(0, charIndex) +
-            "<span class='cursor'>|</span>";
+    let roleIndex = 0;
 
-        charIndex++;
+    let charIndex = 0;
 
-        if (charIndex > current.length) {
-            deleting = true;
-            setTimeout(typingEffect, 1500);
-            return;
-        }
+    let deleting = false;
 
-    } else {
+    const role = document.getElementById("role");
 
-        role.innerHTML =
-            current.substring(0, charIndex) +
-            "<span class='cursor'>|</span>";
 
-        charIndex--;
+    function typingEffect() {
 
-        if (charIndex < 0) {
-            deleting = false;
-            roleIndex++;
+        const current = roles[roleIndex];
 
-            if (roleIndex >= roles.length) {
-                roleIndex = 0;
+        if (!deleting) {
+
+            role.innerHTML =
+                current.substring(0, charIndex) +
+                "<span class='cursor'>|</span>";
+
+            charIndex++;
+
+            if (charIndex > current.length) {
+
+                deleting = true;
+
+                setTimeout(typingEffect, 1500);
+
+                return;
+
             }
+
         }
+
+        else {
+
+            role.innerHTML =
+                current.substring(0, charIndex) +
+                "<span class='cursor'>|</span>";
+
+            charIndex--;
+
+            if (charIndex < 0) {
+
+                deleting = false;
+
+                roleIndex++;
+
+                if (roleIndex >= roles.length) {
+
+                    roleIndex = 0;
+
+                }
+
+            }
+
+        }
+
+        setTimeout(
+            typingEffect,
+            deleting ? 50 : 100
+        );
+
     }
 
-    setTimeout(typingEffect, deleting ? 50 : 100);
-}
-
-typingEffect();
+    typingEffect();
 
 
-// =========================
-// Skills Animation
-// =========================
+    /* =========================
+       SKILLS ANIMATION
+    ========================= */
 
-const skills = document.querySelectorAll(".skills span");
-
-const observer = new IntersectionObserver((entries) => {
-
-    entries.forEach((entry) => {
-
-        if (entry.isIntersecting) {
-
-            entry.target.classList.add("show");
-
-        }
-
-    });
-
-}, {
-    threshold: 0.2
-});
-
-skills.forEach((skill, index) => {
-
-    skill.style.transitionDelay = `${index * 0.08}s`;
-
-    observer.observe(skill);
-
-});
+    const skills =
+        document.querySelectorAll(".skills span");
 
 
-// =========================
-// Card Animation
-// =========================
+    const observer =
+        new IntersectionObserver(
 
-const cards = document.querySelectorAll(".card");
+            (entries) => {
 
-const cardObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
 
-    entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
 
-        if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
 
-            entry.target.animate(
-                [
-                    {
-                        opacity: 0,
-                        transform: "translateY(40px)"
-                    },
-                    {
-                        opacity: 1,
-                        transform: "translateY(0)"
                     }
-                ],
-                {
-                    duration: 700,
-                    fill: "forwards"
+
+                });
+
+            },
+
+            {
+                threshold: 0.2
+            }
+
+        );
+
+
+    skills.forEach((skill, index) => {
+
+        skill.style.transitionDelay =
+            `${index * 0.08}s`;
+
+        observer.observe(skill);
+
+    });
+
+
+    /* =========================
+       CARD ANIMATION
+    ========================= */
+
+    const cards =
+        document.querySelectorAll(".card");
+
+
+    const cardObserver =
+        new IntersectionObserver(
+
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.animate(
+
+                            [
+
+                                {
+                                    opacity: 0,
+                                    transform:
+                                        "translateY(40px)"
+                                },
+
+                                {
+                                    opacity: 1,
+                                    transform:
+                                        "translateY(0)"
+                                }
+
+                            ],
+
+                            {
+                                duration: 700,
+                                fill: "forwards"
+                            }
+
+                        );
+
+                        cardObserver.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: 0.15
+            }
+
+        );
+
+
+    cards.forEach((card) => {
+
+        card.style.opacity = "0";
+
+        cardObserver.observe(card);
+
+    });
+
+
+    /* =========================
+       ACTIVE NAVBAR LINK
+    ========================= */
+
+    const sections =
+        document.querySelectorAll("section");
+
+    const navLinks =
+        document.querySelectorAll("nav a");
+
+
+    window.addEventListener(
+        "scroll",
+        () => {
+
+            let current = "";
+
+            sections.forEach((section) => {
+
+                const sectionTop =
+                    section.offsetTop - 120;
+
+                if (
+                    window.scrollY >= sectionTop
+                ) {
+
+                    current =
+                        section.getAttribute("id");
+
                 }
-            );
 
-            cardObserver.unobserve(entry.target);
+            });
+
+
+            navLinks.forEach((link) => {
+
+                link.style.color = "white";
+
+                if (
+                    link.getAttribute("href") ===
+                    "#" + current
+                ) {
+
+                    link.style.color =
+                        "#38bdf8";
+
+                }
+
+            });
 
         }
+    );
 
-    });
-
-}, {
-    threshold: 0.15
-});
-
-cards.forEach(card => {
-
-    card.style.opacity = "0";
-
-    cardObserver.observe(card);
-
-});
-
-
-// =========================
-// Active Navbar Link
-// =========================
-
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("nav a");
-
-window.addEventListener("scroll", () => {
-
-    let current = "";
-
-    sections.forEach(section => {
-
-        const sectionTop = section.offsetTop - 120;
-
-        if (window.scrollY >= sectionTop) {
-            current = section.getAttribute("id");
-        }
-
-    });
-
-    navLinks.forEach(link => {
-
-        link.style.color = "white";
-
-        if (link.getAttribute("href") === "#" + current) {
-            link.style.color = "#38bdf8";
-        }
-
-    });
-
-});
 </script>
-
-</html>
-
+```
 
 </body>
-
 
 </html>
