@@ -1,1198 +1,1306 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
-<title>Tejasvini Gudade | Java Full Stack Developer</title>
+    <title>Tejasvini Gudade | Java Full Stack Developer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-<style>
+    <style>
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
-        scroll-behavior: smooth;
-    }
-
-    body {
-        background: linear-gradient(135deg, #0f172a, #1d4ed8);
-        color: #fff;
-        line-height: 1.6;
-    }
-
-    /* =========================
-       NAVIGATION
-    ========================= */
-
-    nav {
-        position: sticky;
-        top: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 20px;
-        padding: 18px;
-        background: #111827;
-        z-index: 1000;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    nav a {
-        color: white;
-        text-decoration: none;
-        font-weight: 600;
-        transition: 0.3s;
-    }
-
-    nav a:hover {
-        color: #38bdf8;
-    }
-
-    /* =========================
-       HERO SECTION
-    ========================= */
-
-    header {
-        text-align: center;
-        padding: 90px 20px;
-    }
-
-    .name {
-        font-size: 55px;
-        font-weight: 700;
-        background: linear-gradient(
-            90deg,
-            #38bdf8,
-            #00ffcc,
-            #38bdf8
-        );
-
-        background-size: 300%;
-
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-
-        animation:
-            gradientMove 5s linear infinite,
-            float 3s ease-in-out infinite;
-    }
-
-    @keyframes gradientMove {
-
-        from {
-            background-position: 0%;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
         }
 
-        to {
-            background-position: 300%;
-        }
-    }
-
-    @keyframes float {
-
-        0%, 100% {
-            transform: translateY(0);
+        body {
+            background: linear-gradient(135deg, #0f172a, #1d4ed8);
+            color: #fff;
+            line-height: 1.6;
         }
 
-        50% {
-            transform: translateY(-10px);
-        }
-    }
-
-    #role {
-        color: #38bdf8;
-        font-size: 28px;
-        margin-top: 15px;
-        min-height: 45px;
-    }
-
-    .cursor {
-        animation: blink 0.8s infinite;
-    }
-
-    @keyframes blink {
-
-        50% {
-            opacity: 0;
-        }
-    }
-
-    .subtitle {
-        margin-top: 10px;
-        font-size: 20px;
-        color: #e2e8f0;
-    }
-
-    /* =========================
-       BUTTONS
-    ========================= */
-
-    .buttons {
-        margin-top: 30px;
-    }
-
-    .btn {
-        display: inline-block;
-        margin: 8px;
-        padding: 12px 22px;
-        border-radius: 30px;
-        background: #38bdf8;
-        color: #000;
-        text-decoration: none;
-        font-weight: 700;
-        transition: 0.4s;
-    }
-
-    .btn:hover {
-        transform: translateY(-5px);
-        background: #00d4ff;
-        box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
-    }
-
-    /* =========================
-       SECTIONS
-    ========================= */
-
-    section {
-        max-width: 1100px;
-        margin: auto;
-        padding: 60px 20px;
-    }
-
-    h2 {
-        text-align: center;
-        color: #38bdf8;
-        margin-bottom: 30px;
-        font-size: 35px;
-    }
-
-    .card {
-        background: rgba(255, 255, 255, 0.08);
-        padding: 25px;
-        border-radius: 15px;
-        margin-bottom: 20px;
-        transition: 0.4s;
-        backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    }
-
-    .card h3 {
-        color: #00ffcc;
-        margin-bottom: 10px;
-    }
-
-    .card p {
-        margin: 7px 0;
-        color: #e2e8f0;
-    }
-
-    .card hr {
-        margin: 25px 0;
-        border: none;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    /* =========================
-       SKILLS
-    ========================= */
-
-    .skills {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .skills span {
-        background: linear-gradient(135deg, #00c6ff, #0072ff);
-        padding: 12px 20px;
-        border-radius: 30px;
-        font-weight: 600;
-        color: white;
-        cursor: pointer;
-        transition: 0.4s;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-
-        opacity: 0;
-        transform: translateY(40px);
-    }
-
-    .skills span.show {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .skills span:hover {
-        transform: translateY(-8px) scale(1.08);
-        background: linear-gradient(135deg, #ff6b6b, #ff9800);
-    }
-
-    /* =========================
-       LISTS
-    ========================= */
-
-    ul {
-        margin-top: 10px;
-        margin-left: 20px;
-    }
-
-    li {
-        margin: 8px 0;
-        color: #e2e8f0;
-    }
-
-    /* =========================
-       PROJECT BUTTON
-    ========================= */
-
-    .project-btn {
-        display: inline-block;
-        margin-top: 15px;
-        padding: 10px 18px;
-        background: #38bdf8;
-        color: #000;
-        border-radius: 25px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: 0.3s;
-    }
-
-    .project-btn:hover {
-        background: #00ffcc;
-        transform: translateY(-3px);
-    }
-
-    /* =========================
-       CONTACT
-    ========================= */
-
-    #contact a {
-        color: #38bdf8;
-        text-decoration: none;
-    }
-
-    #contact a:hover {
-        color: white;
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-        background: #111827;
-        text-align: center;
-        padding: 20px;
-        margin-top: 40px;
-        color: #cbd5e1;
-    }
-
-    /* =========================
-       RESPONSIVE
-    ========================= */
-
-    @media (max-width: 768px) {
-
-        .name {
-            font-size: 38px;
-        }
-
-        #role {
-            font-size: 22px;
-        }
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
-            gap: 10px;
-            padding: 15px 10px;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 18px;
+            background: #111827;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         nav a {
-            font-size: 14px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* =========================
+           HERO SECTION
+        ========================= */
+
+        header {
+            text-align: center;
+            padding: 90px 20px;
+        }
+
+        .name {
+            font-size: 55px;
+            font-weight: 700;
+
+            background: linear-gradient(
+                90deg,
+                #38bdf8,
+                #00ffcc,
+                #38bdf8
+            );
+
+            background-size: 300%;
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            animation:
+                gradientMove 5s linear infinite,
+                float 3s ease-in-out infinite;
+        }
+
+        @keyframes gradientMove {
+
+            from {
+                background-position: 0%;
+            }
+
+            to {
+                background-position: 300%;
+            }
+
+        }
+
+        @keyframes float {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+        }
+
+        #role {
+            color: #38bdf8;
+            font-size: 28px;
+            margin-top: 15px;
+            min-height: 45px;
+        }
+
+        .cursor {
+            animation: blink 0.8s infinite;
+        }
+
+        @keyframes blink {
+
+            50% {
+                opacity: 0;
+            }
+
+        }
+
+        .subtitle {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #e2e8f0;
+        }
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .buttons {
+            margin-top: 30px;
         }
 
         .btn {
-            display: block;
-            width: 220px;
-            margin: 10px auto;
+            display: inline-block;
+            margin: 8px;
+            padding: 12px 22px;
+            border-radius: 30px;
+            background: #38bdf8;
+            color: #000;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.4s;
         }
 
+        .btn:hover {
+            transform: translateY(-5px);
+            background: #00d4ff;
+            box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
+        }
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
         section {
-            padding: 45px 15px;
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
         }
 
         h2 {
-            font-size: 30px;
+            text-align: center;
+            color: #38bdf8;
+            margin-bottom: 30px;
+            font-size: 35px;
         }
-    }
 
-</style>
-```
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            transition: 0.4s;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .card h3 {
+            color: #00ffcc;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            margin: 7px 0;
+            color: #e2e8f0;
+        }
+
+        .card hr {
+            margin: 25px 0;
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .skills span {
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            color: white;
+            cursor: pointer;
+            transition: 0.4s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        .skills span.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .skills span:hover {
+            transform: translateY(-8px) scale(1.08);
+            background: linear-gradient(135deg, #ff6b6b, #ff9800);
+        }
+
+        /* =========================
+           LISTS
+        ========================= */
+
+        ul {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        li {
+            margin: 8px 0;
+            color: #e2e8f0;
+        }
+
+        /* =========================
+           PROJECT / CERTIFICATE BUTTON
+        ========================= */
+
+        .project-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 18px;
+            background: #38bdf8;
+            color: #000;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .project-btn:hover {
+            background: #00ffcc;
+            transform: translateY(-3px);
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        #contact a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        #contact a:hover {
+            color: white;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #111827;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #cbd5e1;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .name {
+                font-size: 38px;
+            }
+
+            #role {
+                font-size: 22px;
+            }
+
+            nav {
+                gap: 10px;
+                padding: 15px 10px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .btn {
+                display: block;
+                width: 220px;
+                margin: 10px auto;
+            }
+
+            section {
+                padding: 45px 15px;
+            }
+
+            h2 {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
+
 <body>
 
-```
-<!-- =========================
-     NAVIGATION
-========================= -->
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
 
-<nav>
+    <nav>
 
-    <a href="#about">About</a>
+        <a href="#about">About</a>
 
-    <a href="#education">Education</a>
+        <a href="#education">Education</a>
 
-    <a href="#skills">Skills</a>
+        <a href="#skills">Skills</a>
 
-    <a href="#experience">Experience</a>
+        <a href="#experience">Experience</a>
 
-    <a href="#projects">Projects</a>
+        <a href="#projects">Projects</a>
 
-    <a href="#certifications">Certificates</a>
+        <a href="#certifications">Certificates</a>
 
-    <a href="#contact">Contact</a>
+        <a href="#contact">Contact</a>
 
-</nav>
-
-
-<!-- =========================
-     HERO SECTION
-========================= -->
-
-<header>
-
-    <h1 class="name">
-        Tejasvini Gudade
-    </h1>
-
-    <h2 id="role"></h2>
-
-    <p class="subtitle">
-        Software Engineer | Java Full Stack Developer
-    </p>
-
-    <div class="buttons">
-
-        <a class="btn"
-           href="resume.pdf"
-           target="_blank">
-
-            📄 View Resume
-
-        </a>
-
-        <a class="btn"
-           href="resume.pdf"
-           download>
-
-            ⬇ Download Resume
-
-        </a>
-
-        <a class="btn"
-           href="tel:+918421960472">
-
-            📞 Call Me
-
-        </a>
-
-        <a class="btn"
-           href="mailto:tejswinigudade2021@gmail.com">
-
-            ✉ Email
-
-        </a>
-
-        <a class="btn"
-           href="https://github.com/tejasvini987"
-           target="_blank">
-
-            💻 GitHub
-
-        </a>
-
-    </div>
-
-</header>
+    </nav>
 
 
-<!-- =========================
-     ABOUT
-========================= -->
+    <!-- =========================
+         HERO SECTION
+    ========================= -->
 
-<section id="about">
+    <header>
 
-    <h2>
-        Professional Summary
-    </h2>
+        <h1 class="name">
+            Tejasvini Gudade
+        </h1>
 
-    <div class="card">
+        <h2 id="role"></h2>
 
-        <p>
-
-            Recent B.E. Computer Science graduate with strong knowledge
-            of Java, Spring Framework, Spring Boot, JDBC, Servlets,
-            SQL and MySQL.
-
-            Passionate about developing responsive web applications,
-            REST APIs and database-driven applications using
-            Object-Oriented Programming and MVC architecture.
-
+        <p class="subtitle">
+            Software Engineer | Java Full Stack Developer
         </p>
 
-    </div>
+        <div class="buttons">
 
-</section>
+            <a class="btn"
+               href="resume.pdf"
+               target="_blank">
 
+                📄 View Resume
 
-<!-- =========================
-     EDUCATION
-========================= -->
+            </a>
 
-<section id="education">
+            <a class="btn"
+               href="resume.pdf"
+               download>
 
-    <h2>
-        Education
-    </h2>
+                ⬇ Download Resume
 
-    <div class="card">
+            </a>
 
-        <h3>
-            🎓 Bachelor of Engineering (Computer Science)
-        </h3>
+            <a class="btn"
+               href="tel:+918421960472">
 
-        <p>
-            Savitribai Phule Pune University
-        </p>
+                📞 Call Me
 
-        <p>
-            2021 - 2025
-        </p>
+            </a>
 
-        <p>
-            <b>CGPA:</b> 7.91 / 10
-        </p>
+            <a class="btn"
+               href="mailto:tejswinigudade2021@gmail.com">
 
-    </div>
+                ✉ Email
 
+            </a>
 
-    <div class="card">
+            <a class="btn"
+               href="https://github.com/tejasvini987"
+               target="_blank">
 
-        <h3>
-            📚 Higher Secondary Certificate (HSC)
-        </h3>
+                💻 GitHub
 
-        <p>
-            Maharashtra State Board
-        </p>
+            </a>
 
-        <p>
-            2020 - 2021
-        </p>
+            <a class="btn"
+               href="https://www.linkedin.com/in/tejaswini-gudade/"
+               target="_blank">
 
-        <p>
-            <b>Percentage:</b> 77%
-        </p>
+                💼 LinkedIn
 
-    </div>
-
-
-    <div class="card">
-
-        <h3>
-            🏫 Secondary School Certificate (SSC)
-        </h3>
-
-        <p>
-            Maharashtra State Board
-        </p>
-
-        <p>
-            2018 - 2019
-        </p>
-
-        <p>
-            <b>Percentage:</b> 78%
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     SKILLS
-========================= -->
-
-<section id="skills">
-
-    <h2>
-        Technical Skills
-    </h2>
-
-    <div class="card">
-
-        <div class="skills">
-
-            <span>☕ Java</span>
-
-            <span>📘 Core Java</span>
-
-            <span>🧠 OOP</span>
-
-            <span>🔗 JDBC</span>
-
-            <span>🌱 Spring Framework</span>
-
-            <span>🚀 Spring Boot</span>
-
-            <span>⚙ Spring JDBC</span>
-
-            <span>🔄 Spring Data JPA</span>
-
-            <span>🌐 Servlets</span>
-
-            <span>📄 JSP</span>
-
-            <span>🔗 REST API</span>
-
-            <span>🌐 HTML5</span>
-
-            <span>🎨 CSS3</span>
-
-            <span>⚡ JavaScript</span>
-
-            <span>🗄 SQL</span>
-
-            <span>🐬 MySQL</span>
-
-            <span>🐘 PostgreSQL</span>
-
-            <span>📦 JSON</span>
-
-            <span>🐙 Git</span>
-
-            <span>💼 GitHub</span>
-
-            <span>📁 Maven</span>
-
-            <span>🖥 Eclipse</span>
-
-            <span>🌱 STS</span>
-
-            <span>📝 VS Code</span>
-
-            <span>📊 SDLC</span>
-
-            <span>🏗 MVC</span>
+            </a>
 
         </div>
 
-    </div>
+    </header>
 
-</section>
 
+    <!-- =========================
+         ABOUT
+    ========================= -->
 
-<!-- =========================
-     EXPERIENCE
-========================= -->
+    <section id="about">
 
-<section id="experience">
+        <h2>
+            Professional Summary
+        </h2>
 
-    <h2>
-        Experience
-    </h2>
+        <div class="card">
 
-    <div class="card">
+            <p>
 
-        <h3>
-            Web Developer Intern
-        </h3>
+                B.E. Computer Engineering graduate with hands-on
+                experience as a Java Full Stack Developer Intern.
+                Strong knowledge of Core Java, OOP, Spring Boot,
+                Spring MVC, Spring JDBC, JSP, Servlets, SQL and MySQL.
 
-        <p>
-            <b>A2Z IT Hub Pvt. Ltd.</b>
-        </p>
+                Experienced in developing web applications,
+                implementing CRUD operations, REST APIs and
+                database-driven applications using MVC architecture.
 
-        <p>
-            Duration: 6 Months
-        </p>
+                Currently working on real-world Java Full Stack
+                development projects.
 
-        <ul>
+            </p>
 
-            <li>
-                Developed responsive web application modules
-                using HTML, CSS, JavaScript and Bootstrap.
-            </li>
+        </div>
 
-            <li>
-                Worked on frontend development and
-                backend/database integration.
-            </li>
+    </section>
 
-            <li>
-                Implemented SLD and schedule configuration
-                modules.
-            </li>
 
-            <li>
-                Worked with developers to debug issues and
-                improve application functionality.
-            </li>
+    <!-- =========================
+         EDUCATION
+    ========================= -->
 
-            <li>
-                Improved problem-solving and web development
-                skills through real-world project work.
-            </li>
+    <section id="education">
 
-        </ul>
+        <h2>
+            Education
+        </h2>
 
-    </div>
+        <div class="card">
 
-</section>
+            <h3>
+                🎓 Bachelor of Engineering - Computer Engineering
+            </h3>
 
+            <p>
+                Savitribai Phule Pune University
+            </p>
 
-<!-- =========================
-     PROJECTS
-========================= -->
+            <p>
+                2021 - 2025
+            </p>
 
-<section id="projects">
+            <p>
+                <b>CGPA:</b> 7.92 / 10
+            </p>
 
-    <h2>
-        Projects
-    </h2>
+        </div>
 
 
-    <!-- CURRENT PROJECT -->
+        <div class="card">
 
-    <div class="card">
+            <h3>
+                📚 Higher Secondary Certificate (HSC)
+            </h3>
 
-        <h3>
-            🎓 Internship Recommendation System
-        </h3>
+            <p>
+                Maharashtra State Board
+            </p>
 
-        <p>
+            <p>
+                2020 - 2021
+            </p>
 
-            Developed a Java-based internship recommendation
-            web application designed to help students find
-            and manage suitable internship opportunities.
+            <p>
+                <b>Percentage:</b> 77%
+            </p>
 
-            The system provides separate Admin and Student
-            modules with role-based login functionality.
+        </div>
 
-        </p>
 
-        <ul>
+        <div class="card">
 
-            <li>
-                Implemented Admin and Student login functionality.
-            </li>
+            <h3>
+                🏫 Secondary School Certificate (SSC)
+            </h3>
 
-            <li>
-                Developed an Admin Dashboard for managing
-                internship/company-related information.
-            </li>
+            <p>
+                Maharashtra State Board
+            </p>
 
-            <li>
-                Developed Student Dashboard functionality
-                for student-specific operations.
-            </li>
+            <p>
+                2018 - 2019
+            </p>
 
-            <li>
-                Implemented database integration using
-                Spring Data JPA and MySQL.
-            </li>
+            <p>
+                <b>Percentage:</b> 78%
+            </p>
 
-            <li>
-                Created repository and model layers following
-                Spring Boot architecture.
-            </li>
+        </div>
 
-            <li>
-                Implemented backend APIs for communication
-                between frontend and backend.
-            </li>
+    </section>
 
-            <li>
-                Used MVC-based application structure for
-                maintainable development.
-            </li>
 
-        </ul>
+    <!-- =========================
+         SKILLS
+    ========================= -->
 
-        <p>
-            <b>Tech Stack:</b>
-            Java, Spring Boot, Spring Data JPA, MySQL,
-            HTML, CSS, JavaScript, REST API, Maven
-        </p>
+    <section id="skills">
 
-    </div>
+        <h2>
+            Technical Skills
+        </h2>
 
+        <div class="card">
 
-    <!-- PLACEMENT PROJECT -->
+            <div class="skills">
 
-    <div class="card">
+                <span>☕ Java</span>
 
-        <h3>
-            🏢 Placement Management System
-        </h3>
+                <span>📘 Core Java</span>
 
-        <p>
+                <span>🧠 OOP</span>
 
-            Developed a placement management system for
-            student registration, company management and
-            recruitment tracking.
+                <span>🔗 JDBC</span>
 
-        </p>
+                <span>🌱 Spring Framework</span>
 
-        <ul>
+                <span>🚀 Spring Boot</span>
 
-            <li>
-                Implemented student registration and login.
-            </li>
+                <span>⚙ Spring MVC</span>
 
-            <li>
-                Developed Admin Dashboard functionality.
-            </li>
+                <span>⚙ Spring JDBC</span>
 
-            <li>
-                Implemented company management operations.
-            </li>
+                <span>🔄 Spring Data JPA</span>
 
-            <li>
-                Implemented CRUD operations using Java,
-                Servlets and JDBC.
-            </li>
+                <span>🌐 Servlets</span>
 
-            <li>
-                Integrated MySQL database with the application.
-            </li>
+                <span>📄 JSP</span>
 
-        </ul>
+                <span>🔗 REST API</span>
 
-        <p>
-            <b>Tech Stack:</b>
-            Java, Servlets, JDBC, MySQL,
-            HTML, CSS, JavaScript
-        </p>
+                <span>🌐 HTML5</span>
 
-    </div>
+                <span>🎨 CSS3</span>
 
+                <span>⚡ JavaScript</span>
 
-    <!-- COOKSMART PROJECT -->
+                <span>🗄 SQL</span>
 
-    <div class="card">
+                <span>🐬 MySQL</span>
 
-        <h3>
-            🍳 CookSmart – Ingredient-Based Recipe System
-        </h3>
+                <span>🐘 PostgreSQL</span>
 
-        <p>
+                <span>📦 JSON</span>
 
-            Developed an ingredient-based recipe recommendation
-            system that suggests recipes according to
-            user-selected ingredients.
+                <span>🐙 Git</span>
 
-        </p>
+                <span>💼 GitHub</span>
 
-        <ul>
+                <span>📁 Maven</span>
 
-            <li>
-                Implemented ingredient-based recipe searching.
-            </li>
+                <span>🖥 Eclipse</span>
 
-            <li>
-                Integrated MySQL database using JDBC.
-            </li>
+                <span>🌱 STS</span>
 
-            <li>
-                Designed responsive frontend using
-                HTML, CSS and JavaScript.
-            </li>
+                <span>📝 VS Code</span>
 
-        </ul>
+                <span>📊 SDLC</span>
 
-        <p>
-            <b>Tech Stack:</b>
-            Java, JDBC, MySQL, HTML, CSS, JavaScript
-        </p>
+                <span>🏗 MVC</span>
 
-    </div>
+            </div>
 
-</section>
+        </div>
 
+    </section>
 
-<!-- =========================
-     CERTIFICATIONS
-========================= -->
 
-<section id="certifications">
+    <!-- =========================
+         EXPERIENCE
+    ========================= -->
 
-    <h2>
-        Certifications
-    </h2>
+    <section id="experience">
 
-    <div class="card">
+        <h2>
+            Experience
+        </h2>
 
-        <ul>
+        <div class="card">
 
-            <li>
-                Java Development Certification
-            </li>
+            <h3>
+                💼 Java Full Stack Developer Intern
+            </h3>
 
-            <li>
-                Internship Programming Certification
-            </li>
+            <p>
+                <b>Giri's Tech Hub Pvt. Ltd., Pune</b>
+            </p>
 
-            <li>
-                CSS Certification
-            </li>
+            <p>
+                <b>Current Internship</b>
+            </p>
 
-            <li>
-                JavaScript Certification
-            </li>
+            <ul>
 
-            <li>
-                jQuery Certification
-            </li>
+                <li>
+                    Working as a Java Full Stack Developer Intern
+                    on real-world web application development.
+                </li>
 
-        </ul>
+                <li>
+                    Developing backend applications using
+                    Java, Spring Boot, Spring MVC and Spring JDBC.
+                </li>
 
-    </div>
+                <li>
+                    Working with JSP and Servlets for
+                    web application development.
+                </li>
 
-</section>
+                <li>
+                    Designing and implementing database
+                    integration using MySQL.
+                </li>
 
+                <li>
+                    Developing application modules using
+                    MVC architecture.
+                </li>
 
-<!-- =========================
-     CONTACT
-========================= -->
+                <li>
+                    Working on CRUD operations and
+                    REST API development.
+                </li>
 
-<section id="contact">
+                <li>
+                    Debugging application issues and improving
+                    application functionality.
+                </li>
 
-    <h2>
-        Contact
-    </h2>
+                <li>
+                    Using Git, GitHub, Maven and STS for
+                    development and project management.
+                </li>
 
-    <div class="card">
+            </ul>
 
-        <p>
-            📞
-            <a href="tel:+918421960472">
-                +91 8421960472
-            </a>
-        </p>
+            <p>
 
-        <p>
-            📧
-            <a href="mailto:tejswinigudade2021@gmail.com">
-                tejswinigudade2021@gmail.com
-            </a>
-        </p>
+                <b>Tech Stack:</b>
 
-        <p>
-            💼
-            <a href="https://www.linkedin.com/in/tejaswini-gudade/"
+                Java, Spring Boot, Spring MVC, Spring JDBC,
+                JSP, Servlets, MySQL, HTML, CSS, JavaScript,
+                REST API, Maven, Git, GitHub, STS
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================= -->
+
+    <section id="projects">
+
+        <h2>
+            Projects
+        </h2>
+
+
+        <!-- INTERNSHIP RECOMMENDATION SYSTEM -->
+
+        <div class="card">
+
+            <h3>
+                🎓 Internship Recommendation System
+            </h3>
+
+            <p>
+
+                Developed a Java-based internship recommendation
+                web application designed to help students find
+                and manage suitable internship opportunities.
+
+                The system provides separate Admin and Student
+                modules with role-based login functionality.
+
+            </p>
+
+            <ul>
+
+                <li>
+                    Implemented Admin and Student login functionality.
+                </li>
+
+                <li>
+                    Developed Admin Dashboard for managing
+                    student, company and internship information.
+                </li>
+
+                <li>
+                    Developed Student Dashboard functionality.
+                </li>
+
+                <li>
+                    Implemented database integration using
+                    Spring JDBC and MySQL.
+                </li>
+
+                <li>
+                    Created repository and service layers
+                    following Spring architecture.
+                </li>
+
+                <li>
+                    Implemented backend APIs for frontend
+                    and backend communication.
+                </li>
+
+                <li>
+                    Used MVC-based application structure.
+                </li>
+
+            </ul>
+
+            <p>
+
+                <b>Tech Stack:</b>
+
+                Java, Spring Boot, Spring MVC, Spring JDBC,
+                MySQL, JSP, Servlets, HTML, CSS, JavaScript,
+                REST API, Maven
+
+            </p>
+
+        </div>
+
+
+        <!-- PLACEMENT MANAGEMENT SYSTEM -->
+
+        <div class="card">
+
+            <h3>
+                🏢 Placement Management System
+            </h3>
+
+            <p>
+
+                Developed a placement management system for
+                student registration, company management and
+                recruitment tracking.
+
+            </p>
+
+            <ul>
+
+                <li>
+                    Implemented student registration and login.
+                </li>
+
+                <li>
+                    Developed Admin Dashboard functionality.
+                </li>
+
+                <li>
+                    Implemented company management operations.
+                </li>
+
+                <li>
+                    Implemented CRUD operations using
+                    Java, Servlets and JDBC.
+                </li>
+
+                <li>
+                    Integrated MySQL database with the application.
+                </li>
+
+            </ul>
+
+            <p>
+
+                <b>Tech Stack:</b>
+
+                Java, Servlets, JDBC, MySQL,
+                HTML, CSS, JavaScript
+
+            </p>
+
+        </div>
+
+
+        <!-- COOKSMART -->
+
+        <div class="card">
+
+            <h3>
+                🍳 CookSmart - Ingredient-Based Recipe System
+            </h3>
+
+            <p>
+
+                Developed an ingredient-based recipe recommendation
+                system that suggests recipes according to
+                user-selected ingredients.
+
+            </p>
+
+            <ul>
+
+                <li>
+                    Implemented ingredient-based recipe searching.
+                </li>
+
+                <li>
+                    Integrated MySQL database using JDBC.
+                </li>
+
+                <li>
+                    Designed responsive frontend using
+                    HTML, CSS and JavaScript.
+                </li>
+
+            </ul>
+
+            <p>
+
+                <b>Tech Stack:</b>
+
+                Java, JDBC, MySQL, HTML, CSS, JavaScript
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CERTIFICATIONS
+    ========================= -->
+
+    <section id="certifications">
+
+        <h2>
+            Certifications
+        </h2>
+
+
+        <!-- JAVA FULL STACK CERTIFICATE -->
+
+        <div class="card">
+
+            <h3>
+                🏆 Java Full Stack Development with AI
+            </h3>
+
+            <p>
+                <b>Giri's Tech Hub Pvt. Ltd., Pune</b>
+            </p>
+
+            <p>
+                Certificate of Completion
+            </p>
+
+            <p>
+                <b>Training Period:</b>
+                05 August 2025 - 05 May 2026
+            </p>
+
+            <p>
+                <b>Location:</b> Pune
+            </p>
+
+            <a class="project-btn"
+               href="java-full-stack-certificate.pdf"
                target="_blank">
 
-                LinkedIn Profile
+                📜 View Certificate
 
             </a>
-        </p>
 
-        <p>
-            💻
-            <a href="https://github.com/tejasvini987"
-               target="_blank">
-
-                GitHub Profile
-
-            </a>
-        </p>
-
-    </div>
-
-</section>
+        </div>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+        <!-- OTHER CERTIFICATIONS -->
 
-<footer>
+        <div class="card">
 
-    © 2026 Tejasvini Gudade | Java Full Stack Developer
+            <h3>
+                📜 Other Certifications
+            </h3>
 
-</footer>
+            <ul>
 
+                <li>
+                    Java Development Certification
+                </li>
 
-<!-- =========================
-     JAVASCRIPT
-========================= -->
+                <li>
+                    CSS Certification
+                </li>
 
-<script>
+                <li>
+                    JavaScript Certification
+                </li>
 
-    /* =========================
-       TYPING ANIMATION
-    ========================= */
+                <li>
+                    jQuery Certification
+                </li>
 
-    const roles = [
+            </ul>
 
-        "💻 Software Engineer",
+        </div>
 
-        "☕ Java Developer",
-
-        "🚀 Java Full Stack Developer",
-
-        "🌐 Web Developer"
-
-    ];
-
-    let roleIndex = 0;
-
-    let charIndex = 0;
-
-    let deleting = false;
-
-    const role = document.getElementById("role");
+    </section>
 
 
-    function typingEffect() {
+    <!-- =========================
+         CONTACT
+    ========================= -->
 
-        const current = roles[roleIndex];
+    <section id="contact">
 
-        if (!deleting) {
+        <h2>
+            Contact
+        </h2>
 
-            role.innerHTML =
-                current.substring(0, charIndex) +
-                "<span class='cursor'>|</span>";
+        <div class="card">
 
-            charIndex++;
+            <p>
 
-            if (charIndex > current.length) {
+                📞
 
-                deleting = true;
+                <a href="tel:+918421960472">
 
-                setTimeout(typingEffect, 1500);
+                    +91 8421960472
 
-                return;
+                </a>
 
-            }
+            </p>
 
-        }
 
-        else {
+            <p>
 
-            role.innerHTML =
-                current.substring(0, charIndex) +
-                "<span class='cursor'>|</span>";
+                📧
 
-            charIndex--;
+                <a href="mailto:tejswinigudade2021@gmail.com">
 
-            if (charIndex < 0) {
+                    tejswinigudade2021@gmail.com
 
-                deleting = false;
+                </a>
 
-                roleIndex++;
+            </p>
 
-                if (roleIndex >= roles.length) {
 
-                    roleIndex = 0;
+            <p>
+
+                💼
+
+                <a href="https://www.linkedin.com/in/tejaswini-gudade/"
+                   target="_blank">
+
+                    LinkedIn Profile
+
+                </a>
+
+            </p>
+
+
+            <p>
+
+                💻
+
+                <a href="https://github.com/tejasvini987"
+                   target="_blank">
+
+                    GitHub Profile
+
+                </a>
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        © 2026 Tejasvini Gudade |
+        Java Full Stack Developer
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        /* =========================
+           TYPING ANIMATION
+        ========================= */
+
+        const roles = [
+
+            "💻 Software Engineer",
+
+            "☕ Java Developer",
+
+            "🚀 Java Full Stack Developer",
+
+            "🌐 Web Developer"
+
+        ];
+
+        let roleIndex = 0;
+
+        let charIndex = 0;
+
+        let deleting = false;
+
+        const role = document.getElementById("role");
+
+
+        function typingEffect() {
+
+            const current = roles[roleIndex];
+
+            if (!deleting) {
+
+                role.innerHTML =
+                    current.substring(0, charIndex) +
+                    "<span class='cursor'>|</span>";
+
+                charIndex++;
+
+                if (charIndex > current.length) {
+
+                    deleting = true;
+
+                    setTimeout(typingEffect, 1500);
+
+                    return;
 
                 }
 
             }
 
-        }
+            else {
 
-        setTimeout(
-            typingEffect,
-            deleting ? 50 : 100
-        );
+                role.innerHTML =
+                    current.substring(0, charIndex) +
+                    "<span class='cursor'>|</span>";
 
-    }
+                charIndex--;
 
-    typingEffect();
+                if (charIndex < 0) {
 
+                    deleting = false;
 
-    /* =========================
-       SKILLS ANIMATION
-    ========================= */
+                    roleIndex++;
 
-    const skills =
-        document.querySelectorAll(".skills span");
+                    if (roleIndex >= roles.length) {
 
-
-    const observer =
-        new IntersectionObserver(
-
-            (entries) => {
-
-                entries.forEach((entry) => {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add("show");
+                        roleIndex = 0;
 
                     }
 
-                });
+                }
 
-            },
-
-            {
-                threshold: 0.2
             }
 
-        );
+            setTimeout(
+                typingEffect,
+                deleting ? 50 : 100
+            );
+
+        }
+
+        typingEffect();
 
 
-    skills.forEach((skill, index) => {
+        /* =========================
+           SKILLS ANIMATION
+        ========================= */
 
-        skill.style.transitionDelay =
-            `${index * 0.08}s`;
-
-        observer.observe(skill);
-
-    });
+        const skills =
+            document.querySelectorAll(".skills span");
 
 
-    /* =========================
-       CARD ANIMATION
-    ========================= */
+        const observer =
+            new IntersectionObserver(
 
-    const cards =
-        document.querySelectorAll(".card");
+                (entries) => {
+
+                    entries.forEach((entry) => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("show");
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.2
+                }
+
+            );
 
 
-    const cardObserver =
-        new IntersectionObserver(
+        skills.forEach((skill, index) => {
 
-            (entries) => {
+            skill.style.transitionDelay =
+                `${index * 0.08}s`;
 
-                entries.forEach((entry) => {
+            observer.observe(skill);
 
-                    if (entry.isIntersecting) {
+        });
 
-                        entry.target.animate(
 
-                            [
+        /* =========================
+           CARD ANIMATION
+        ========================= */
+
+        const cards =
+            document.querySelectorAll(".card");
+
+
+        const cardObserver =
+            new IntersectionObserver(
+
+                (entries) => {
+
+                    entries.forEach((entry) => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.animate(
+
+                                [
+
+                                    {
+                                        opacity: 0,
+                                        transform:
+                                            "translateY(40px)"
+                                    },
+
+                                    {
+                                        opacity: 1,
+                                        transform:
+                                            "translateY(0)"
+                                    }
+
+                                ],
 
                                 {
-                                    opacity: 0,
-                                    transform:
-                                        "translateY(40px)"
-                                },
-
-                                {
-                                    opacity: 1,
-                                    transform:
-                                        "translateY(0)"
+                                    duration: 700,
+                                    fill: "forwards"
                                 }
 
-                            ],
+                            );
 
-                            {
-                                duration: 700,
-                                fill: "forwards"
-                            }
+                            cardObserver.unobserve(
+                                entry.target
+                            );
 
-                        );
+                        }
 
-                        cardObserver.unobserve(
-                            entry.target
-                        );
+                    });
+
+                },
+
+                {
+                    threshold: 0.15
+                }
+
+            );
+
+
+        cards.forEach((card) => {
+
+            card.style.opacity = "0";
+
+            cardObserver.observe(card);
+
+        });
+
+
+        /* =========================
+           ACTIVE NAVBAR LINK
+        ========================= */
+
+        const sections =
+            document.querySelectorAll("section");
+
+        const navLinks =
+            document.querySelectorAll("nav a");
+
+
+        window.addEventListener(
+            "scroll",
+            () => {
+
+                let current = "";
+
+                sections.forEach((section) => {
+
+                    const sectionTop =
+                        section.offsetTop - 120;
+
+                    if (
+                        window.scrollY >= sectionTop
+                    ) {
+
+                        current =
+                            section.getAttribute("id");
 
                     }
 
                 });
 
-            },
 
-            {
-                threshold: 0.15
+                navLinks.forEach((link) => {
+
+                    link.style.color = "white";
+
+                    if (
+                        link.getAttribute("href") ===
+                        "#" + current
+                    ) {
+
+                        link.style.color =
+                            "#38bdf8";
+
+                    }
+
+                });
+
             }
-
         );
 
-
-    cards.forEach((card) => {
-
-        card.style.opacity = "0";
-
-        cardObserver.observe(card);
-
-    });
-
-
-    /* =========================
-       ACTIVE NAVBAR LINK
-    ========================= */
-
-    const sections =
-        document.querySelectorAll("section");
-
-    const navLinks =
-        document.querySelectorAll("nav a");
-
-
-    window.addEventListener(
-        "scroll",
-        () => {
-
-            let current = "";
-
-            sections.forEach((section) => {
-
-                const sectionTop =
-                    section.offsetTop - 120;
-
-                if (
-                    window.scrollY >= sectionTop
-                ) {
-
-                    current =
-                        section.getAttribute("id");
-
-                }
-
-            });
-
-
-            navLinks.forEach((link) => {
-
-                link.style.color = "white";
-
-                if (
-                    link.getAttribute("href") ===
-                    "#" + current
-                ) {
-
-                    link.style.color =
-                        "#38bdf8";
-
-                }
-
-            });
-
-        }
-    );
-
-</script>
-```
+    </script>
 
 </body>
 
